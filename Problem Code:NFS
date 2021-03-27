@@ -1,0 +1,34 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+    int T;
+    cin>>T;
+    int t=0;
+    double u,v,a,s;
+    string str[T];
+    double x;
+    while(t<T){
+       cin>>u>>v>>a>>s;
+        x=sqrt((u*u)-(2*a*s));
+        if(u==v){
+            str[t]="yes";
+        }
+        
+        else if(x<=(v*v)){
+            str[t]="yes";
+        }
+        
+        else{
+            str[t]="no";
+        }
+        t++;
+    }
+    for(int i=0;i<T;i++){
+        cout << str[i] << "\n";
+    
+    }
+   return 0;
+}
