@@ -1,0 +1,23 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{long long int T;
+    cin >> T;
+    long long int t=0;
+    while(t<=T){
+        long long int N,X;
+        cin >> N >> X;
+        long long int s[N],r[N],mr=0;
+        for(long long int i=0;i<N;i++){
+            cin >> s[i] >> r[i];
+            if(mr<r[i] && s[i]<=X){
+                mr=r[i];
+            }
+        }
+        cout << mr;
+        t++;
+    }
+    return 0;
+}
